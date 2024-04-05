@@ -1,12 +1,17 @@
 # llm-content-creator (Allen-GPT)
 
-To install dependencies:
+## Setup 
+- Modify the `index.ts` file to change the content being generated.
+- Copy .env_example to .env and add api keys
+
+## Usage
+
+Install dependencies:
 
 ```bash
 bun install
 ```
-
-To run:
+Run the script
 
 ```bash
 bun run index.ts

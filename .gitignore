@@ -175,5 +175,7 @@ dist
 .DS_Store
 
 .env
-.env*
 **/.env
+
+output
+blog
