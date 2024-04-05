@@ -1,5 +1,5 @@
-import { generateText } from "../ai";
-import { researchSystemPrompt } from "../prompt";
+import { generateText } from "../llm";
+import { researchSystemPrompt } from "../llm/prompt";
 import { saveToFile } from "../utils";
 import { generateSubtopicReport } from "./subtopics";
 

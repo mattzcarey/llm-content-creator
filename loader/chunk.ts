@@ -15,6 +15,10 @@ export const getBlogFiles = (blogDirectory: string): Document[] => {
   // Read all files in the blog directory
   const files = readdirSync(blogDirectory);
 
+  if (files.length === 0) {
+    throw new Error(`No files found in ${blogDirectory}`);
+  }
+
   for (const file of files) {
     const filePath = join(blogDirectory, file);
     const fileContents = readFileSync(filePath, "utf-8");

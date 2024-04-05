@@ -1,12 +1,12 @@
-import { generateText } from "./ai";
-import { loadContext } from "./loader";
-import { store } from "./loader/store";
+import { generateText } from "./llm";
 import {
   toneSystemPrompt,
   toneUserPrompt,
   userPrompt,
   writerSystemPrompt,
-} from "./prompt";
+} from "./llm/prompt";
+import { loadContext } from "./loader";
+import { store } from "./loader/store";
 import { saveResearch } from "./research";
 import { saveToFile } from "./utils";
 
@@ -24,7 +24,7 @@ const draft = await generateText(
 );
 
 // Load the context
-await loadContext("blog");
+await loadContext(dirPath);
 
 // Retrieve the relevant documents
 const retriever = store.asRetriever(6);
